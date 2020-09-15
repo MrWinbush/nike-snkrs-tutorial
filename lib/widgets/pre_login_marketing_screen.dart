@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login.dart';
+import '../application_flow/login.dart';
 
 class PreLoginMarketingScreen extends StatelessWidget {
   PreLoginInfo preLoginInfo;

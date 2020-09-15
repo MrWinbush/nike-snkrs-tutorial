@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nike_flutter_app/login_button.dart';
-import 'package:nike_flutter_app/pre_login_marketing_screen.dart';
+import 'package:nike_flutter_app/application_flow/root_page.dart';
+import 'package:nike_flutter_app/widgets/login_button.dart';
+import 'package:nike_flutter_app/widgets/pre_login_marketing_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key, this.title}) : super(key: key);
@@ -57,7 +60,12 @@ class _LoginPageState extends State<LoginPage> {
                     LoginButton("Join Now", Colors.black, Colors.white)
                   ],
                 ),
-                FlatButton(onPressed: null, child: Text("Continue as Guest")),
+                FlatButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => RootPage()));
+                  }, 
+                  child: Text("Continue as Guest")
+                ),
                 SizedBox(height: 40,),
               ],
             ),
